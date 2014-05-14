@@ -4,4 +4,21 @@
 
 #### 注意事项
 
-1. 在matlab2013版本下，需要将rep函数改为repmat。
+1. 在 matlab2013 版本下，需要将 rep 函数改为 repmat
+2. 手写识别样本数据读取方式如下：
+``` matlab
+a = textread('0_0.txt', '%s');                                                                                       
+b_0_0 = cell2mat(a);
+```
+3. 由于手写识别数据太多，收取单个读取不可取，应使用 eval 函数 或者 for 循环批量读取
+
+``` matlab
+list=dir(['F:\数据\','0_*.txt']);
+
+k=length(list)
+for i=1:k
+    str = strcat ('F:\数据\', list(i).name) % str = ['F:\数据\', list(i).name]
+    tmp = textread(str, '%s');                                                                                       
+    a_0{i} = cell2mat(a);
+end
+```
