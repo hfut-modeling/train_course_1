@@ -13,11 +13,11 @@ b_0_0 = cell2mat(a);
 - 由于手写识别数据太多，单个读取不可取，应使用 eval 函数 或者 for 循环批量读取
 
 ``` matlab
-list = dir(['F:\数据\', '0_*.txt']);
+list = dir(['F:\data\', '0_*.txt']);
 
 k = length(list);
 for i = 1:k
-    str = strcat('F:\数据\', list(i).name); % str = ['F:\数据\', list(i).name]
+    str = strcat('F:\data\', list(i).name); % str = ['F:\数据\', list(i).name]
     tmp = textread(str, '%s');                                                                                       
     a_0{i} = cell2mat(a);
 end
