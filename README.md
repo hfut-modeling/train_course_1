@@ -17,7 +17,7 @@ list = dir(['F:\数据\', '0_*.txt']);
 
 k = length(list);
 for i = 1:k
-    str = strcat ('F:\数据\', list(i).name); % str = ['F:\数据\', list(i).name]
+    str = strcat('F:\数据\', list(i).name); % str = ['F:\数据\', list(i).name]
     tmp = textread(str, '%s');                                                                                       
     a_0{i} = cell2mat(a);
 end
