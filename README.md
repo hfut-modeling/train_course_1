@@ -19,6 +19,6 @@ k = length(list);
 for i = 1:k
     str = strcat('F:\data\', list(i).name); % str = ['F:\data\', list(i).name]
     tmp = textread(str, '%s');                                                                                       
-    a_0{i} = cell2mat(a);
+    a_0{i} = cell2mat(tmp);
 end
 ```
